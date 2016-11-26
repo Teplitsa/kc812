@@ -1,0 +1,26 @@
+/** Header **/
+.site-header {
+	background:$color-secondary-black;
+	color: $color-white;
+	padding: 10px 0 15px;
+}
+
+.site-panel-row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	
+	.site-branding {
+		text-align: center;
+	}
+	
+	
+}
+
+#logo-full {
+	@include post-title();
+	color: $color-white;
+	text-align: center;
+}
+
+

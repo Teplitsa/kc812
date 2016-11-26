@@ -1,0 +1,67 @@
+{
+    "name"        : "tst/install-test",
+    "description" : "SWC winner website",
+    "authors"     : [
+        {
+            "name"    : "Teplitsa",
+            "email"   : "support@te-st.ru",
+            "homepage": "http://te-st.ru/"
+        }
+    ],
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "http://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "http://wp-languages.github.io"
+        },
+        {
+            "type": "artifact",
+            "url": "artifacts/"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/wp-sync-db/wp-sync-db"
+        }
+    ],
+    "config"      : {
+        "vendor-dir": "wp-content/vendor",
+        "secure-http" : false
+    },
+   "require"     : {
+        "composer/installers": "~1.0",  
+        "johnpbloch/wordpress" : ">=4.3",
+        "wpackagist-plugin/cyr3lat" : "@stable",
+        "wpackagist-plugin/crop-thumbnails": "@stable",
+        "wpackagist-plugin/disable-comments" : "@stable",                
+        "wpackagist-plugin/leyka" : "@stable",
+        "wpackagist-plugin/media-search-enhanced": "@stable",
+        "wpackagist-plugin/responsive-lightbox" : "@stable",        
+        "wpackagist-plugin/wordpress-seo" : "@stable",
+        "wpackagist-plugin/w3-total-cache": "@stable",        
+        "wpackagist-plugin/cmb2": "@stable",       
+        "wpackagist-plugin/formidable": "@stable",
+        "wpackagist-plugin/siteorigin-panels": "@stable",
+        "wpackagist-plugin/so-widgets-bundle": "@stable",
+        "wpackagist-plugin/tiny-compress-images": "@stable",
+        "koodimonni-language/core-ru_ru": "*"        
+    },
+    "require-dev" : {
+        "wp-sync-db/wp-sync-db" : "dev-master",
+        "wpackagist-plugin/force-regenerate-thumbnails" : "@stable",
+        "wpackagist-plugin/post-duplicator" : "@stable",
+        "wpackagist-plugin/disable-wordpress-updates": "@stable",
+        "wpackagist-plugin/term-management-tools": "@stable",
+        "wpackagist-plugin/post-type-converter": "@stable"
+    },
+    "extra"       : {
+        "wordpress-install-dir": "core",
+        "dropin-paths": {
+            "wp-content/languages/": ["vendor:koodimonni-language"]
+        }
+    }
+}
+

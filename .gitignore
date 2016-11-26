@@ -1,0 +1,18 @@
+_temp
+.htaccess
+.DS_Store
+.komodotools
+.sass-cache
+core
+wp-content/debug.log
+wp-content/languages
+wp-content/plugins
+node_modules
+bower_components
+wp-content/upgrade
+wp-content/uploads
+wp-content/vendor
+wp-config.php
+
+debug.log
+*Конфликтующая копия с компьютера*
