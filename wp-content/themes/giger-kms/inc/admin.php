@@ -322,6 +322,11 @@ function tst_admin_fotter_text($text) {
 /** Notification about wront thumbnail size **/
 add_filter('admin_post_thumbnail_html', 'tst_thumbnail_dimensions_check', 10, 2);
 function tst_thumbnail_dimensions_check($thumbnail_html, $post_id) {
+
+    if(function_exists('wp_doing_ajax') && wp_doing_ajax()) {
+        return $thumbnail_html;
+    }
+
 	global $_wp_additional_image_sizes;
 	
 	if('org' == get_post_type($post_id))
